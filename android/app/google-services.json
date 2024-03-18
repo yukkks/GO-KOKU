@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "765604367729",
+    "project_id": "go-koku-uakybm",
+    "storage_bucket": "go-koku-uakybm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765604367729:android:5869428cd6b9815493fad0",
+        "android_client_info": {
+          "package_name": "com.flutterflow.gokoku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk43xWp-a9S9C3PjwD-h1Eiw8YueHsxF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
