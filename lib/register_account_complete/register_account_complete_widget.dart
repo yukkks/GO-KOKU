@@ -70,10 +70,10 @@ class _RegisterAccountCompleteWidgetState
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 56.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      'xf8d4sm8' /* アカウント作成完了 */,
+                      '17hdbr5x' /* アカウント作成完了 */,
                     ),
                     style: FlutterFlowTheme.of(context).displaySmall.override(
                           fontFamily: 'Inter',
@@ -99,7 +99,7 @@ class _RegisterAccountCompleteWidgetState
                   );
                 },
                 text: FFLocalizations.of(context).getText(
-                  'wrbg19ed' /* 次へ */,
+                  'fi70ixrv' /* 次へ */,
                 ),
                 options: FFButtonOptions(
                   width: 130.0,

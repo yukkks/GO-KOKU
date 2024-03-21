@@ -33,14 +33,9 @@ T valueOrDefault<T>(T? value, T defaultValue) =>
     (value is String && value.isEmpty) || value == null ? defaultValue : value;
 
 void _setTimeagoLocales() {
+  timeago.setLocaleMessages('ja', timeago.JaMessages());
   timeago.setLocaleMessages('en', timeago.EnMessages());
   timeago.setLocaleMessages('en_short', timeago.EnShortMessages());
-  timeago.setLocaleMessages('es', timeago.EsMessages());
-  timeago.setLocaleMessages('es_short', timeago.EsShortMessages());
-  timeago.setLocaleMessages('de', timeago.DeMessages());
-  timeago.setLocaleMessages('de_short', timeago.DeShortMessages());
-  timeago.setLocaleMessages('ar', timeago.ArMessages());
-  timeago.setLocaleMessages('ar_short', timeago.ArShortMessages());
 }
 
 String dateTimeFormat(String format, DateTime? dateTime, {String? locale}) {

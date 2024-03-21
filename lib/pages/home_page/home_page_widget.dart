@@ -10,6 +10,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -167,7 +168,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '51kawpgz' /* ようこそ！ */,
+                                  'xgmbtowt' /* ようこそ！ */,
                                 ),
                                 style:
                                     FlutterFlowTheme.of(context).headlineSmall,
@@ -233,7 +234,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             alignment: AlignmentDirectional(0.0, -1.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'wknu2tm4' /* ¥3,000 */,
+                                'sgfjo8vr' /* ¥3,000 */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -274,7 +275,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             center: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'nl2b129x' /* 70% */,
+                                                'i5p9ueem' /* 70% */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -290,7 +291,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'ukapzm0q' /* ¥5,000まであとわずか! */,
+                                              'tssy8466' /* ¥5,000まであとわずか! */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -345,7 +346,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'y7zomzzp' /* Quick Service */,
+                                '3o2hvd4s' /* クイックサービス */,
                               ),
                               style: FlutterFlowTheme.of(context).bodySmall,
                             ),
@@ -390,7 +391,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       },
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'rfozud9v' /* デバイス配送 */,
+                                          'cwhhznow' /* デバイス配送 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -427,7 +428,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         0.0, 8.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'pcrarg0a' /* 友達紹介 */,
+                                        'mhprtt58' /* 友達紹介 */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -471,7 +472,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       },
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '0ijza5eo' /* マイページ */,
+                                          'qzabh0o6' /* マイページ */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -496,7 +497,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'dfjtbkbo' /* サポート */,
+                                '2ehakw31' /* サポート */,
                               ),
                               style: FlutterFlowTheme.of(context).bodySmall,
                             ),
@@ -517,23 +518,41 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    8.0, 0.0, 0.0, 0.0),
-                                child: Card(
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40.0),
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    await launchUrl(Uri(
+                                      scheme: 'tel',
+                                      path: '+818044251958',
+                                    ));
+                                  },
+                                  text: '',
+                                  icon: Icon(
+                                    Icons.call,
+                                    size: 15.0,
                                   ),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.call_sharp,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
-                                      size: 24.0,
+                                  options: FFButtonOptions(
+                                    height: 40.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        14.0, 0.0, 8.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color:
+                                        FlutterFlowTheme.of(context).tertiary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                          fontSize: 15.0,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
                                     ),
+                                    borderRadius: BorderRadius.circular(24.0),
                                   ),
                                 ),
                               ),
@@ -549,7 +568,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          'g7t9krj7' /* コールセンター */,
+                                          'd8rg0b5c' /* コールセンター */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall,
@@ -576,23 +595,38 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    8.0, 0.0, 0.0, 0.0),
-                                child: Card(
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40.0),
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed('TermsandConditions');
+                                  },
+                                  text: '',
+                                  icon: Icon(
+                                    Icons.newspaper_sharp,
+                                    size: 15.0,
                                   ),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: FaIcon(
-                                      FontAwesomeIcons.solidNewspaper,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
-                                      size: 24.0,
+                                  options: FFButtonOptions(
+                                    height: 40.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        14.0, 0.0, 8.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color:
+                                        FlutterFlowTheme.of(context).tertiary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                          fontSize: 15.0,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
                                     ),
+                                    borderRadius: BorderRadius.circular(24.0),
                                   ),
                                 ),
                               ),
@@ -608,7 +642,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '2thn73jc' /* 利用規約 */,
+                                          '1tvjk7dq' /* 利用規約 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall,

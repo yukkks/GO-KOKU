@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -40,6 +41,37 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).tertiary,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
+          icon: Icon(
+            Icons.arrow_back_rounded,
+            color: Colors.white,
+            size: 30.0,
+          ),
+          onPressed: () async {
+            context.pop();
+          },
+        ),
+        title: Text(
+          FFLocalizations.of(context).getText(
+            'rqel1w5y' /* デバイス配送依頼 */,
+          ),
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
+                fontFamily: 'Inter',
+                color: Colors.white,
+                fontSize: 22.0,
+              ),
+        ),
+        actions: [],
+        centerTitle: true,
+        elevation: 2.0,
+      ),
       body: SafeArea(
         top: true,
         child: Column(
@@ -124,7 +156,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'i8hl2uua' /* GO-KOKU デバイス */,
+                                                'vrs15rvu' /* GO-KOKU デバイス */,
                                               ),
                                               textAlign: TextAlign.center,
                                               style:
@@ -152,7 +184,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'hxtwax0y' /* 自転車に */,
+                                                    'vrnibzz5' /* 自転車に */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -173,7 +205,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'zm68ygmz' /* 簡単設置で */,
+                                                    '31bqx9ap' /* 簡単設置で */,
                                                   ),
                                                   style: TextStyle(),
                                                 ),
@@ -181,7 +213,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'dobde7yl' /* お金 */,
+                                                    '1nh7pqo7' /* お金 */,
                                                   ),
                                                   style: TextStyle(
                                                     color: FlutterFlowTheme.of(
@@ -195,7 +227,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'pska3q5u' /* が */,
+                                                    'nsy8lral' /* が */,
                                                   ),
                                                   style: TextStyle(),
                                                 ),
@@ -203,7 +235,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'zt67gu9n' /* ぞくぞく */,
+                                                    'odph89nx' /* ぞくぞく */,
                                                   ),
                                                   style: TextStyle(
                                                     color: FlutterFlowTheme.of(
@@ -217,7 +249,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    's6mx8vw8' /* 貯まる */,
+                                                    'zntr7pqj' /* 貯まる */,
                                                   ),
                                                   style: TextStyle(),
                                                 )
@@ -269,7 +301,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                       Expanded(
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'mjy3ljln' /* Keep Track of Spending */,
+                                            'yirej4qx' /* Keep Track of Spending */,
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
@@ -288,7 +320,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                       Expanded(
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'uf9k1spp' /* Easily add transactions and as... */,
+                                            'cpjp4hwq' /* Easily add transactions and as... */,
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
@@ -334,7 +366,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                       Expanded(
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            '9c4outzf' /* Budget Analysis */,
+                                            'ecxmgik0' /* Budget Analysis */,
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
@@ -353,7 +385,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                       Expanded(
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'q30ina4f' /* Know where your budgets are an... */,
+                                            'w98bkr7t' /* Know where your budgets are an... */,
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
@@ -396,7 +428,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                         );
                       },
                       text: FFLocalizations.of(context).getText(
-                        'ypt7b97g' /* 今すぐデバイスを手に入れる */,
+                        'yo4xlhzw' /* 今すぐデバイスを手に入れる */,
                       ),
                       options: FFButtonOptions(
                         width: 266.0,

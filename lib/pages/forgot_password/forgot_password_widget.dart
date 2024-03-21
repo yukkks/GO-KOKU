@@ -62,7 +62,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
         ),
         title: Text(
           FFLocalizations.of(context).getText(
-            'g416xg9f' /* Forgot Password */,
+            'zksvh04r' /* パスワードを忘れた方 */,
           ),
           style: FlutterFlowTheme.of(context).headlineSmall,
         ),
@@ -92,9 +92,15 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                   Expanded(
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'xaiad71o' /* Enter the email associated wit... */,
+                        'y1it4bhf' /* 確認コードをメールで送信します。
+メールアドレスを入力くださ... */
+                        ,
                       ),
-                      style: FlutterFlowTheme.of(context).bodySmall,
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.of(context).bodySmall.override(
+                            fontFamily: 'Readex Pro',
+                            fontSize: 15.0,
+                          ),
                     ),
                   ),
                 ],
@@ -108,11 +114,11 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: FFLocalizations.of(context).getText(
-                    'u4nuk910' /* Email Address */,
+                    'j2dzvt13' /* メールアドレス */,
                   ),
                   labelStyle: FlutterFlowTheme.of(context).bodySmall,
                   hintText: FFLocalizations.of(context).getText(
-                    '37kotxi0' /* Enter your email... */,
+                    'ng9cs14u' /* メールアドレス */,
                   ),
                   hintStyle: FlutterFlowTheme.of(context).bodySmall,
                   enabledBorder: OutlineInputBorder(
@@ -173,7 +179,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                   );
                 },
                 text: FFLocalizations.of(context).getText(
-                  'hiwpaze1' /* Send Reset Link */,
+                  't962glzw' /* 送信する */,
                 ),
                 options: FFButtonOptions(
                   width: 190.0,

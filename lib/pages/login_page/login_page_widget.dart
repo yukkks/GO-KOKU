@@ -95,7 +95,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               0.0, 0.0, 0.0, 20.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'fzxvw3mu' /* New value For Every Day */,
+                              'l45jvmoj' /* 「毎日」に新しい「価値」 */,
                             ),
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
@@ -120,11 +120,17 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 children: [
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'o07j3mgv' /* WELCOME */,
+                                      'isuqkebs' /* ようこそ！ */,
                                     ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
-                                        .displaySmall,
+                                        .displaySmall
+                                        .override(
+                                          fontFamily: 'Inter',
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+                                          fontSize: 25.0,
+                                        ),
                                   ),
                                 ],
                               ),
@@ -139,13 +145,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   decoration: InputDecoration(
                                     labelText:
                                         FFLocalizations.of(context).getText(
-                                      'a9j78va9' /* Email Address */,
+                                      '28hmeziw' /* メールアドレス */,
                                     ),
                                     labelStyle:
                                         FlutterFlowTheme.of(context).bodySmall,
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'i7f18cve' /* Enter your email... */,
+                                      'ldczere7' /* メールアドレス... */,
                                     ),
                                     hintStyle:
                                         FlutterFlowTheme.of(context).bodySmall,
@@ -201,13 +207,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   decoration: InputDecoration(
                                     labelText:
                                         FFLocalizations.of(context).getText(
-                                      'wztjmbn8' /* Password */,
+                                      '3xtyu61t' /* パスワード */,
                                     ),
                                     labelStyle:
                                         FlutterFlowTheme.of(context).bodySmall,
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'lw1jpm1f' /* Enter your password... */,
+                                      'kxlembfs' /* パスワード... */,
                                     ),
                                     hintStyle:
                                         FlutterFlowTheme.of(context).bodySmall,
@@ -280,7 +286,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         context.pushNamed('forgotPassword');
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'm2xyjvuf' /* Forgot Password? */,
+                                        '5a7onnqn' /* パスワードを忘れた方 */,
                                       ),
                                       options: FFButtonOptions(
                                         width: 170.0,
@@ -292,7 +298,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Color(0x001A1F24),
                                         textStyle: FlutterFlowTheme.of(context)
-                                            .bodySmall,
+                                            .bodySmall
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              fontWeight: FontWeight.w600,
+                                            ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
@@ -321,7 +331,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           'homePage', context.mounted);
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'qbmoi1av' /* Login */,
+                                      '5khxzhpc' /* ログイン */,
                                     ),
                                     options: FFButtonOptions(
                                       width: 120.0,
@@ -379,7 +389,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'cjqb8ial' /* Don't have an account? */,
+                                              'jrwui1gm' /* アカウントをお持ちでない場合は、 */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium,
@@ -387,7 +397,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    24.0, 0.0, 4.0, 0.0),
+                                                    0.0, 0.0, 4.0, 0.0),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -401,7 +411,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'a0iimirx' /* Create */,
+                                                  'sq7d9r7u' /* 今すぐ作成 */,
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
@@ -414,23 +424,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                               .tertiary,
                                                     ),
                                               ),
-                                            ),
-                                          ),
-                                          InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onTap: () async {
-                                              context
-                                                  .pushNamed('registerAccount');
-                                            },
-                                            child: Icon(
-                                              Icons.arrow_forward_rounded,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .tertiary,
-                                              size: 24.0,
                                             ),
                                           ),
                                         ],

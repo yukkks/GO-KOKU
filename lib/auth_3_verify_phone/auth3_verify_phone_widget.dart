@@ -172,7 +172,7 @@ class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          'and2urpc' /* GO-KOKU */,
+                                          '1uqsql2y' /* GO-KOKU */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .displaySmall,
@@ -215,12 +215,21 @@ class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>
                                           },
                                         ),
                                       ),
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          'i0bpri4p' /* Verification Code */,
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional(0.0, 0.0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'z8xasx9a' /* 電話番号確認コード */,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .displaySmall
+                                              .override(
+                                                fontFamily: 'Inter',
+                                                fontSize: 20.0,
+                                              ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .displaySmall,
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -239,14 +248,6 @@ class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>
                                             text: TextSpan(
                                               children: [
                                                 TextSpan(
-                                                  text: FFLocalizations.of(
-                                                          context)
-                                                      .getText(
-                                                    'wpbymolo' /* Enter the 6 digit code that yo... */,
-                                                  ),
-                                                  style: TextStyle(),
-                                                ),
-                                                TextSpan(
                                                   text: widget.phoneNumber!,
                                                   style: TextStyle(
                                                     color: FlutterFlowTheme.of(
@@ -259,7 +260,7 @@ class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'ezjwrr05' /*  change number? */,
+                                                    'yxb5l1s5' /* へお送りした６桁コードを入力してください。 */,
                                                   ),
                                                   style: TextStyle(),
                                                 )
@@ -373,7 +374,7 @@ class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'sqd7xja2' /* Verify Code */,
+                                              'meylgfu0' /* Verify Code */,
                                             ),
                                             options: FFButtonOptions(
                                               width: 200.0,

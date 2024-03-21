@@ -69,6 +69,37 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
         return Scaffold(
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          appBar: AppBar(
+            backgroundColor: FlutterFlowTheme.of(context).tertiary,
+            automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 60.0,
+              icon: Icon(
+                Icons.arrow_back_rounded,
+                color: Colors.white,
+                size: 30.0,
+              ),
+              onPressed: () async {
+                context.pop();
+              },
+            ),
+            title: Text(
+              FFLocalizations.of(context).getText(
+                '3utr9126' /* Page Title */,
+              ),
+              style: FlutterFlowTheme.of(context).headlineMedium.override(
+                    fontFamily: 'Inter',
+                    color: Colors.white,
+                    fontSize: 22.0,
+                  ),
+            ),
+            actions: [],
+            centerTitle: true,
+            elevation: 2.0,
+          ),
           body: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -107,7 +138,8 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                             children: [
                               Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
                                 elevation: 2.0,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40.0),
@@ -171,7 +203,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
-                              'f1bvbey3' /* マイアカウント */,
+                              'y5ktrdtz' /* マイアカウント */,
                             ),
                             style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
@@ -210,7 +242,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'i61y9ibx' /* 個人情報変更 */,
+                                  'kzzm7vdm' /* 個人情報変更 */,
                                 ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
@@ -267,7 +299,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    '03k0vw86' /* パスワード変更 */,
+                                    'gr4xkpyb' /* パスワード変更 */,
                                   ),
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
@@ -326,7 +358,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    '9aogde79' /* GO-KOKU デバイスの使い方 */,
+                                    'ej7sru2g' /* GO-KOKU デバイスの使い方 */,
                                   ),
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
@@ -361,7 +393,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         setDarkModeSetting(context, ThemeMode.dark);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '2ll42t1u' /* ログアウト */,
+                        'nw0oveyt' /* ログアウト */,
                       ),
                       options: FFButtonOptions(
                         width: 130.0,
@@ -396,7 +428,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         setDarkModeSetting(context, ThemeMode.light);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '8d386226' /* Light Mode */,
+                        '69437e71' /* Light Mode */,
                       ),
                       options: FFButtonOptions(
                         width: 130.0,

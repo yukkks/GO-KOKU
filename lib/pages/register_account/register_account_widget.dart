@@ -120,10 +120,10 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                     children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 20.0),
+                                            0.0, 0.0, 0.0, 10.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'gpokmd81' /* New value For Every Day */,
+                                            '8k5s8w6c' /* 「毎日」に新しい「価値」 */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .displaySmall
@@ -149,7 +149,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       children: [
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            'oitrrwgg' /* WELCOME */,
+                                            'ggz07dhq' /* ようこそ！ */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
@@ -157,8 +157,8 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                                 fontFamily: 'Readex Pro',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                fontSize: 30.0,
+                                                        .tertiary,
+                                                fontSize: 25.0,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                         ),
@@ -175,13 +175,13 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'gcwdqm4g' /* Email Address */,
+                                          'fxr60gk7' /* メールアドレス */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'iam0xgwx' /* Enter your email... */,
+                                          'q12ldr96' /* メールアドレス */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
@@ -243,13 +243,13 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'bqv15dcf' /* Password */,
+                                          'gru83l3l' /* パスワード */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'joih97mn' /* Enter your password... */,
+                                          'kidj2wro' /* パスワード */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
@@ -330,13 +330,13 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'rzpiwq9p' /* Confirm Password */,
+                                          'rvmzbcp4' /* パスワード確認 */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'eyfkffka' /* Enter your password... */,
+                                          'dcb52ewq' /* パスワード */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
@@ -435,35 +435,15 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                           return;
                                         }
 
+                                        await authManager
+                                            .sendEmailVerification();
+
                                         context.goNamedAuth(
                                             'auth_3_verifyemailAddress',
                                             context.mounted);
-
-                                        GoRouter.of(context).prepareAuthEvent();
-                                        final smsCodeVal =
-                                            getCurrentTimestamp.toString();
-                                        if (smsCodeVal == null ||
-                                            smsCodeVal.isEmpty) {
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                  'Enter SMS verification code.'),
-                                            ),
-                                          );
-                                          return;
-                                        }
-                                        final phoneVerifiedUser =
-                                            await authManager.verifySmsCode(
-                                          context: context,
-                                          smsCode: smsCodeVal,
-                                        );
-                                        if (phoneVerifiedUser == null) {
-                                          return;
-                                        }
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        '5kmjfwsk' /* Create Account */,
+                                        '9riyqjds' /* 新規登録 */,
                                       ),
                                       options: FFButtonOptions(
                                         width: 160.0,
@@ -533,21 +513,23 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: [
-                                              Icon(
-                                                Icons.arrow_back_rounded,
-                                                color:
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'mcxqjkbd' /* すでにアカウントをお持ちですか? */,
+                                                ),
+                                                style:
                                                     FlutterFlowTheme.of(context)
-                                                        .tertiary,
-                                                size: 24.0,
+                                                        .bodyMedium,
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        4.0, 0.0, 24.0, 0.0),
+                                                        4.0, 0.0, 4.0, 0.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '3twynvfz' /* Login */,
+                                                    'hjacbsqg' /* ログイン */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -562,14 +544,12 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                                       ),
                                                 ),
                                               ),
-                                              Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '9ssznj0g' /* Already have an account? */,
-                                                ),
-                                                style:
+                                              Icon(
+                                                Icons.arrow_forward,
+                                                color:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .tertiary,
+                                                size: 24.0,
                                               ),
                                             ],
                                           ),

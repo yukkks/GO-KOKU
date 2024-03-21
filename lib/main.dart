@@ -88,10 +88,8 @@ class _MyAppState extends State<MyApp> {
       ],
       locale: _locale,
       supportedLocales: const [
+        Locale('ja'),
         Locale('en'),
-        Locale('es'),
-        Locale('de'),
-        Locale('ar'),
       ],
       theme: ThemeData(
         brightness: Brightness.light,
@@ -162,7 +160,7 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              '8srr2k0j' /* マイページ */,
+              'ou0wmt7j' /* マイページ */,
             ),
             tooltip: '',
           ),
@@ -172,7 +170,7 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: FFLocalizations.of(context).getText(
-              'f3hxl69y' /* Home */,
+              'xbj391u7' /* Home */,
             ),
             tooltip: '',
           )

@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -172,7 +173,7 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                             AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'p7mtg9db' /* GO-KOKU */,
+                                            'pir2o3ir' /* GO-KOKU */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .displaySmall,
@@ -218,7 +219,7 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          'od8hm4yd' /* Phone Number */,
+                                          'z51mdwcc' /* 携帯番号 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .displaySmall,
@@ -235,19 +236,11 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                                 text:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  '8rcucepm' /* Enter Phone Number to Proceed */,
+                                                  'opnss722' /* 下記に電話番号を入力してください */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelLarge,
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                  'dycpeko5' /* Hello World  */,
-                                                ),
-                                                style: TextStyle(),
                                               )
                                             ],
                                             style: FlutterFlowTheme.of(context)
@@ -266,9 +259,6 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                             focusNode:
                                                 _model.phoneNumberFocusNode,
                                             autofocus: true,
-                                            autofillHints: [
-                                              AutofillHints.telephoneNumber
-                                            ],
                                             textInputAction:
                                                 TextInputAction.send,
                                             obscureText: false,
@@ -276,7 +266,7 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                               labelText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'ktkzetpc' /* Phone Number... */,
+                                                'ns5726be' /* ０８０－１２３４－５６７８... */,
                                               ),
                                               labelStyle:
                                                   FlutterFlowTheme.of(context)
@@ -329,10 +319,13 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium,
+                                            maxLength: 11,
+                                            maxLengthEnforcement:
+                                                MaxLengthEnforcement.enforced,
                                             keyboardType: TextInputType.phone,
                                             cursorColor:
                                                 FlutterFlowTheme.of(context)
-                                                    .primary,
+                                                    .tertiary,
                                             validator: _model
                                                 .phoneNumberControllerValidator
                                                 .asValidator(context),
@@ -356,7 +349,7 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'yz5m5pqg' /* Continue */,
+                                              'foj3j1mm' /* 次へ */,
                                             ),
                                             options: FFButtonOptions(
                                               width: 200.0,

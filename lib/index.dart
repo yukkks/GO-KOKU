@@ -1,6 +1,6 @@
 // Export pages
 export '/pages/login_page/login_page_widget.dart' show LoginPageWidget;
-export '/register_account/register_account_widget.dart'
+export '/pages/register_account/register_account_widget.dart'
     show RegisterAccountWidget;
 export '/pages/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
@@ -19,3 +19,6 @@ export '/auth_3_verifyemail_address/auth3_verifyemail_address_widget.dart'
 export '/termsand_conditions/termsand_conditions_widget.dart'
     show TermsandConditionsWidget;
 export '/pages/home_address/home_address_widget.dart' show HomeAddressWidget;
+export '/splash/splash_widget.dart' show SplashWidget;
+export '/order_device_complete/order_device_complete_widget.dart'
+    show OrderDeviceCompleteWidget;

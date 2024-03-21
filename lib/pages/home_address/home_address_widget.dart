@@ -61,51 +61,31 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: FlutterFlowTheme.of(context).tertiary,
           automaticallyImplyLeading: false,
-          title: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                FFLocalizations.of(context).getText(
-                  '13zdjgfz' /* 住所 */,
-                ),
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Inter',
-                      fontSize: 18.0,
-                    ),
-              ),
-              Text(
-                FFLocalizations.of(context).getText(
-                  'e1uf2rlm' /* 下記に住所を登録してください */,
-                ),
-                style: FlutterFlowTheme.of(context).labelMedium,
-              ),
-            ].divide(SizedBox(height: 4.0)),
-          ),
-          actions: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
-              child: FlutterFlowIconButton(
-                borderColor: FlutterFlowTheme.of(context).alternate,
-                borderRadius: 12.0,
-                borderWidth: 1.0,
-                buttonSize: 40.0,
-                fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                icon: Icon(
-                  Icons.close_rounded,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: 24.0,
-                ),
-                onPressed: () async {
-                  context.safePop();
-                },
-              ),
+          leading: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: Colors.white,
+              size: 30.0,
             ),
-          ],
-          centerTitle: false,
-          elevation: 0.0,
+            onPressed: () async {
+              context.pop();
+            },
+          ),
+          title: Text(
+            FFLocalizations.of(context).getText(
+              'vii525ca' /* 下記に住所を登録してください */,
+            ),
+            style: FlutterFlowTheme.of(context).labelMedium,
+          ),
+          actions: [],
+          centerTitle: true,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -137,7 +117,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                 children: [
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      '0x4c7w63' /* 郵便番号 */,
+                                      'm463qm5g' /* 郵便番号 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -152,7 +132,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'j9867u04' /* 例) 111-1111 */,
+                                        '3ttt6eox' /* 例) 111-1111 */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelLarge
@@ -226,7 +206,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      '248bks6b' /* 都道府県 */,
+                                      'y0olico2' /* 都道府県 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -241,7 +221,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'cjdgnr4m' /* 例) 080-1234-5678 */,
+                                        '9tc77i1b' /* 例) 080-1234-5678 */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelLarge
@@ -320,7 +300,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'bmxolrix' /* 市区町村 */,
+                                      'lqdcd6oa' /* 市区町村 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -335,7 +315,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'o37jky32' /* 例) 港区 */,
+                                        'qchvaiex' /* 例) 港区 */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelLarge,
@@ -407,7 +387,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'u1v1gkqk' /* 番地 */,
+                                      'o50610b5' /* 番地 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -422,7 +402,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        '240h9kz8' /* 例) 南麻布２－１３－１８ */,
+                                        '1jqoodnp' /* 例) 南麻布２－１３－１８ */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelLarge
@@ -498,7 +478,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                   ),
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'refjbuao' /* 建物名・部屋番号 */,
+                                      '1541cjjc' /* 建物名・部屋番号 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -513,7 +493,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'jtyqi3rd' /* 例) ８０１ */,
+                                        '0nfb0bb8' /* 例) ８０１ */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelLarge
@@ -614,7 +594,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                         }
                       },
                       text: FFLocalizations.of(context).getText(
-                        'rld57hjc' /* 次へ */,
+                        '95lsvq8q' /* 次へ */,
                       ),
                       options: FFButtonOptions(
                         width: double.infinity,

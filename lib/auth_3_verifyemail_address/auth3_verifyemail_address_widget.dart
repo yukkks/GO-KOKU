@@ -89,6 +89,37 @@ class _Auth3VerifyemailAddressWidgetState
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).tertiary,
+          automaticallyImplyLeading: false,
+          leading: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
+            icon: Icon(
+              Icons.arrow_back_rounded,
+              color: Colors.white,
+              size: 30.0,
+            ),
+            onPressed: () async {
+              context.pop();
+            },
+          ),
+          title: Text(
+            FFLocalizations.of(context).getText(
+              'oscfm83s' /* メールアドレス確認 */,
+            ),
+            style: FlutterFlowTheme.of(context).headlineMedium.override(
+                  fontFamily: 'Inter',
+                  color: Colors.white,
+                  fontSize: 22.0,
+                ),
+          ),
+          actions: [],
+          centerTitle: true,
+          elevation: 2.0,
+        ),
         body: SafeArea(
           top: true,
           child: Row(
@@ -175,7 +206,7 @@ class _Auth3VerifyemailAddressWidgetState
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '7nxtet79' /* GO-KOKU */,
+                                          'n6twpi8j' /* GO-KOKU */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .displaySmall,
@@ -194,36 +225,17 @@ class _Auth3VerifyemailAddressWidgetState
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 12.0),
-                                        child: FlutterFlowIconButton(
-                                          borderColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryBackground,
-                                          borderRadius: 12.0,
-                                          borderWidth: 1.0,
-                                          buttonSize: 40.0,
-                                          fillColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryBackground,
-                                          icon: Icon(
-                                            Icons.arrow_back_rounded,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            size: 24.0,
-                                          ),
-                                          onPressed: () async {
-                                            context.safePop();
-                                          },
-                                        ),
-                                      ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '0gpv7adl' /* Email Verification Code */,
+                                          'sk0zqu7u' /* 新規アカウント設定用のメールアドレスの確認コード */,
                                         ),
+                                        textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
-                                            .displaySmall,
+                                            .displaySmall
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              fontSize: 20.0,
+                                            ),
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -234,14 +246,6 @@ class _Auth3VerifyemailAddressWidgetState
                                           text: TextSpan(
                                             children: [
                                               TextSpan(
-                                                text:
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                  'l0yflz6b' /* Enter the 6 digit code that yo... */,
-                                                ),
-                                                style: TextStyle(),
-                                              ),
-                                              TextSpan(
                                                 text: widget.emailAddress,
                                                 style: TextStyle(
                                                   color: FlutterFlowTheme.of(
@@ -249,6 +253,14 @@ class _Auth3VerifyemailAddressWidgetState
                                                       .tertiary,
                                                   fontWeight: FontWeight.bold,
                                                 ),
+                                              ),
+                                              TextSpan(
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'i2etw8jt' /* へお送りした６桁コードを入力してください。 */,
+                                                ),
+                                                style: TextStyle(),
                                               )
                                             ],
                                             style: FlutterFlowTheme.of(context)
@@ -275,7 +287,7 @@ class _Auth3VerifyemailAddressWidgetState
                                         showCursor: true,
                                         cursorColor:
                                             FlutterFlowTheme.of(context)
-                                                .primary,
+                                                .tertiary,
                                         obscureText: false,
                                         hintCharacter: '-',
                                         keyboardType: TextInputType.number,
@@ -298,7 +310,7 @@ class _Auth3VerifyemailAddressWidgetState
                                                   .secondaryBackground,
                                           selectedColor:
                                               FlutterFlowTheme.of(context)
-                                                  .primary,
+                                                  .tertiary,
                                           activeFillColor:
                                               FlutterFlowTheme.of(context)
                                                   .primaryText,
@@ -307,7 +319,7 @@ class _Auth3VerifyemailAddressWidgetState
                                                   .secondaryBackground,
                                           selectedFillColor:
                                               FlutterFlowTheme.of(context)
-                                                  .primary,
+                                                  .tertiary,
                                         ),
                                         controller: _model.pinCodeController,
                                         onChanged: (_) {},
@@ -357,7 +369,7 @@ class _Auth3VerifyemailAddressWidgetState
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              '6lp6jkc5' /* Verify Code */,
+                                              '2qovqb74' /* 次へ */,
                                             ),
                                             options: FFButtonOptions(
                                               width: 200.0,

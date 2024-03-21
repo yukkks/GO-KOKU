@@ -1,5 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -43,25 +44,35 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).tertiary,
         automaticallyImplyLeading: false,
-        leading: InkWell(
-          splashColor: Colors.transparent,
-          focusColor: Colors.transparent,
-          hoverColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () async {
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
+          icon: Icon(
+            Icons.arrow_back_rounded,
+            color: Colors.white,
+            size: 30.0,
+          ),
+          onPressed: () async {
             context.pop();
           },
-          child: Icon(
-            Icons.chevron_left_rounded,
-            color: FlutterFlowTheme.of(context).tertiary,
-            size: 32.0,
+        ),
+        title: Text(
+          FFLocalizations.of(context).getText(
+            '7n7wepbs' /* 利用規約 */,
           ),
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
+                fontFamily: 'Inter',
+                color: Colors.white,
+                fontSize: 22.0,
+              ),
         ),
         actions: [],
-        centerTitle: false,
-        elevation: 0.0,
+        centerTitle: true,
+        elevation: 2.0,
       ),
       body: StreamBuilder<UsersRecord>(
         stream: UsersRecord.getDocument(currentUserReference!),
@@ -86,22 +97,6 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            's197qzgu' /* Terms & Conditions */,
-                          ),
-                          style: FlutterFlowTheme.of(context).displaySmall,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 44.0),
                   child: Row(
@@ -110,7 +105,7 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
                       Expanded(
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'gt5gnngk' /* Lorem ipsum dolor sit amet, co... */,
+                            '7fbvc8o9' /* このセクションでは、当社の個人情報利用目的について記載してい... */,
                           ),
                           style: FlutterFlowTheme.of(context).bodySmall,
                         ),
@@ -123,7 +118,7 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
                     context.pushNamed('registerAccountComplete');
                   },
                   text: FFLocalizations.of(context).getText(
-                    'dp1xhe9d' /* Agree */,
+                    '4oed1i7y' /* 同意する */,
                   ),
                   options: FFButtonOptions(
                     height: 40.0,

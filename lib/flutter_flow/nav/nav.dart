@@ -164,6 +164,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'homeAddress',
           path: '/homeAddress',
           builder: (context, params) => HomeAddressWidget(),
+        ),
+        FFRoute(
+          name: 'splash',
+          path: '/splash',
+          builder: (context, params) => SplashWidget(),
+        ),
+        FFRoute(
+          name: 'orderDeviceComplete',
+          path: '/orderDeviceComplete',
+          builder: (context, params) => OrderDeviceCompleteWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -346,12 +356,9 @@ class FFRoute {
           final child = appStateNotifier.loading
               ? Container(
                   color: Colors.transparent,
-                  child: Center(
-                    child: Image.asset(
-                      'assets/images/Medical_ScheduleApp_0.0.png',
-                      width: MediaQuery.sizeOf(context).width * 1.0,
-                      fit: BoxFit.fitWidth,
-                    ),
+                  child: Image.asset(
+                    'assets/images/7829e4f944b04584ba9d4b34d84eedd3_(2).png',
+                    fit: BoxFit.contain,
                   ),
                 )
               : page;
