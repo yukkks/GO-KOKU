@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -27,66 +28,67 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final animationsMap = {
-    'rowOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 22.0),
-          end: Offset(0.0, 0.0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(0.2, 0.0),
-          end: Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'columnOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 60.0),
-          end: Offset(0.0, 0.0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(1.0, 0.0),
-          end: Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-  };
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => HomePageModel());
 
+    animationsMap.addAll({
+      'rowOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: Offset(0.0, 22.0),
+            end: Offset(0.0, 0.0),
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: Offset(0.2, 0.0),
+            end: Offset(1.0, 1.0),
+          ),
+        ],
+      ),
+      'columnOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: Offset(0.0, 60.0),
+            end: Offset(0.0, 0.0),
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: Offset(1.0, 0.0),
+            end: Offset(1.0, 1.0),
+          ),
+        ],
+      ),
+    });
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||
@@ -162,6 +164,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           fontFamily: 'Inter',
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
+                                          letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
@@ -170,8 +173,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 FFLocalizations.of(context).getText(
                                   'xgmbtowt' /* ようこそ！ */,
                                 ),
-                                style:
-                                    FlutterFlowTheme.of(context).headlineSmall,
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineSmall
+                                    .override(
+                                      fontFamily: 'Inter',
+                                      letterSpacing: 0.0,
+                                    ),
                               ),
                             ],
                           ),
@@ -195,7 +202,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           BoxShadow(
                             blurRadius: 6.0,
                             color: Color(0x4B1A1F24),
-                            offset: Offset(0.0, 2.0),
+                            offset: Offset(
+                              0.0,
+                              2.0,
+                            ),
                           )
                         ],
                         gradient: LinearGradient(
@@ -243,6 +253,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     fontSize: 40.0,
+                                    letterSpacing: 0.0,
                                   ),
                             ),
                           ),
@@ -279,7 +290,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .headlineSmall,
+                                                      .headlineSmall
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                             barRadius: Radius.circular(20.0),
                                             padding: EdgeInsets.zero,
@@ -298,6 +313,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                 .override(
                                                   fontFamily: 'Readex Pro',
                                                   fontSize: 15.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
@@ -325,7 +341,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x34000000),
-                        offset: Offset(0.0, -2.0),
+                        offset: Offset(
+                          0.0,
+                          -2.0,
+                        ),
                       )
                     ],
                     borderRadius: BorderRadius.only(
@@ -348,7 +367,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               FFLocalizations.of(context).getText(
                                 '3o2hvd4s' /* クイックサービス */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodySmall,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                             ),
                           ],
                         ),
@@ -368,20 +392,28 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.tablet,
-                                    color:
-                                        FlutterFlowTheme.of(context).tertiary,
-                                    size: 40.0,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 8.0, 0.0, 0.0),
-                                    child: InkWell(
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'orderDevice',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.bottomToTop,
+                                      ),
+                                    },
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
                                       hoverColor: Colors.transparent,
@@ -389,20 +421,40 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       onTap: () async {
                                         context.pushNamed('orderDevice');
                                       },
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'cwhhznow' /* デバイス配送 */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontWeight: FontWeight.w600,
-                                            ),
+                                      child: Icon(
+                                        Icons.tablet,
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiary,
+                                        size: 40.0,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 8.0, 0.0, 0.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed('orderDevice');
+                                        },
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'cwhhznow' /* デバイス配送 */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Container(
@@ -434,6 +486,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                     ),
@@ -453,11 +506,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.location_history_sharp,
-                                    color:
-                                        FlutterFlowTheme.of(context).tertiary,
-                                    size: 40.0,
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('MY_profilePage');
+                                    },
+                                    child: Icon(
+                                      Icons.location_history_sharp,
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
+                                      size: 40.0,
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -478,6 +540,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
                                       ),
@@ -499,7 +562,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               FFLocalizations.of(context).getText(
                                 '2ehakw31' /* サポート */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodySmall,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                             ),
                           ],
                         ),
@@ -546,6 +614,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
                                           fontSize: 15.0,
+                                          letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
                                     borderSide: BorderSide(
@@ -571,7 +640,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           'd8rg0b5c' /* コールセンター */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .headlineSmall,
+                                            .headlineSmall
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
                                     ],
                                   ),
@@ -620,6 +693,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
                                           fontSize: 15.0,
+                                          letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
                                     borderSide: BorderSide(
@@ -645,7 +719,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           '1tvjk7dq' /* 利用規約 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .headlineSmall,
+                                            .headlineSmall
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
                                     ],
                                   ),

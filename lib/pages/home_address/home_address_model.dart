@@ -15,9 +15,9 @@ class HomeAddressModel extends FlutterFlowModel<HomeAddressWidget> {
   final formKey = GlobalKey<FormState>();
   // State field(s) for age widget.
   FocusNode? ageFocusNode;
-  TextEditingController? ageController;
-  String? Function(BuildContext, String?)? ageControllerValidator;
-  String? _ageControllerValidator(BuildContext context, String? val) {
+  TextEditingController? ageTextController;
+  String? Function(BuildContext, String?)? ageTextControllerValidator;
+  String? _ageTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         '1zj6o1uy' /* Please enter an age for the pa... */,
@@ -29,14 +29,15 @@ class HomeAddressModel extends FlutterFlowModel<HomeAddressWidget> {
 
   // State field(s) for phoneNumber widget.
   FocusNode? phoneNumberFocusNode;
-  TextEditingController? phoneNumberController;
-  String? Function(BuildContext, String?)? phoneNumberControllerValidator;
+  TextEditingController? phoneNumberTextController;
+  String? Function(BuildContext, String?)? phoneNumberTextControllerValidator;
   // State field(s) for dateOfBirth widget.
   FocusNode? dateOfBirthFocusNode1;
-  TextEditingController? dateOfBirthController1;
+  TextEditingController? dateOfBirthTextController1;
   final dateOfBirthMask1 = MaskTextInputFormatter(mask: '##/##/####');
-  String? Function(BuildContext, String?)? dateOfBirthController1Validator;
-  String? _dateOfBirthController1Validator(BuildContext context, String? val) {
+  String? Function(BuildContext, String?)? dateOfBirthTextController1Validator;
+  String? _dateOfBirthTextController1Validator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         'e4v5o2iu' /* Please enter the date of birth... */,
@@ -48,43 +49,37 @@ class HomeAddressModel extends FlutterFlowModel<HomeAddressWidget> {
 
   // State field(s) for dateOfBirth widget.
   FocusNode? dateOfBirthFocusNode2;
-  TextEditingController? dateOfBirthController2;
+  TextEditingController? dateOfBirthTextController2;
   final dateOfBirthMask2 = MaskTextInputFormatter(mask: '##/##/####');
-  String? Function(BuildContext, String?)? dateOfBirthController2Validator;
+  String? Function(BuildContext, String?)? dateOfBirthTextController2Validator;
   // State field(s) for dateOfBirth widget.
   FocusNode? dateOfBirthFocusNode3;
-  TextEditingController? dateOfBirthController3;
+  TextEditingController? dateOfBirthTextController3;
   final dateOfBirthMask3 = MaskTextInputFormatter(mask: '##/##/####');
-  String? Function(BuildContext, String?)? dateOfBirthController3Validator;
-
-  /// Initialization and disposal methods.
+  String? Function(BuildContext, String?)? dateOfBirthTextController3Validator;
 
   @override
   void initState(BuildContext context) {
-    ageControllerValidator = _ageControllerValidator;
-    dateOfBirthController1Validator = _dateOfBirthController1Validator;
+    ageTextControllerValidator = _ageTextControllerValidator;
+    dateOfBirthTextController1Validator = _dateOfBirthTextController1Validator;
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
     ageFocusNode?.dispose();
-    ageController?.dispose();
+    ageTextController?.dispose();
 
     phoneNumberFocusNode?.dispose();
-    phoneNumberController?.dispose();
+    phoneNumberTextController?.dispose();
 
     dateOfBirthFocusNode1?.dispose();
-    dateOfBirthController1?.dispose();
+    dateOfBirthTextController1?.dispose();
 
     dateOfBirthFocusNode2?.dispose();
-    dateOfBirthController2?.dispose();
+    dateOfBirthTextController2?.dispose();
 
     dateOfBirthFocusNode3?.dispose();
-    dateOfBirthController3?.dispose();
+    dateOfBirthTextController3?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

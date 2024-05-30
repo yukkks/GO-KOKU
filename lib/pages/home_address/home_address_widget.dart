@@ -26,19 +26,19 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
     super.initState();
     _model = createModel(context, () => HomeAddressModel());
 
-    _model.ageController ??= TextEditingController();
+    _model.ageTextController ??= TextEditingController();
     _model.ageFocusNode ??= FocusNode();
     _model.ageFocusNode!.addListener(() => setState(() {}));
-    _model.phoneNumberController ??= TextEditingController();
+    _model.phoneNumberTextController ??= TextEditingController();
     _model.phoneNumberFocusNode ??= FocusNode();
     _model.phoneNumberFocusNode!.addListener(() => setState(() {}));
-    _model.dateOfBirthController1 ??= TextEditingController();
+    _model.dateOfBirthTextController1 ??= TextEditingController();
     _model.dateOfBirthFocusNode1 ??= FocusNode();
     _model.dateOfBirthFocusNode1!.addListener(() => setState(() {}));
-    _model.dateOfBirthController2 ??= TextEditingController();
+    _model.dateOfBirthTextController2 ??= TextEditingController();
     _model.dateOfBirthFocusNode2 ??= FocusNode();
     _model.dateOfBirthFocusNode2!.addListener(() => setState(() {}));
-    _model.dateOfBirthController3 ??= TextEditingController();
+    _model.dateOfBirthTextController3 ??= TextEditingController();
     _model.dateOfBirthFocusNode3 ??= FocusNode();
     _model.dateOfBirthFocusNode3!.addListener(() => setState(() {}));
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -81,7 +81,10 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
             FFLocalizations.of(context).getText(
               'vii525ca' /* 下記に住所を登録してください */,
             ),
-            style: FlutterFlowTheme.of(context).labelMedium,
+            style: FlutterFlowTheme.of(context).labelMedium.override(
+                  fontFamily: 'Readex Pro',
+                  letterSpacing: 0.0,
+                ),
           ),
           actions: [],
           centerTitle: true,
@@ -120,10 +123,14 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                       'm463qm5g' /* 郵便番号 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                   TextFormField(
-                                    controller: _model.ageController,
+                                    controller: _model.ageTextController,
                                     focusNode: _model.ageFocusNode,
                                     autofocus: true,
                                     textCapitalization:
@@ -138,10 +145,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
                                       errorStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -149,6 +161,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .error,
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -197,11 +210,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               16.0, 20.0, 16.0, 20.0),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
-                                    validator: _model.ageControllerValidator
+                                    validator: _model.ageTextControllerValidator
                                         .asValidator(context),
                                   ),
                                   Text(
@@ -209,10 +226,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                       'y0olico2' /* 都道府県 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                   TextFormField(
-                                    controller: _model.phoneNumberController,
+                                    controller:
+                                        _model.phoneNumberTextController,
                                     focusNode: _model.phoneNumberFocusNode,
                                     autofocus: true,
                                     textCapitalization:
@@ -227,12 +249,14 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                           ),
                                       errorStyle: FlutterFlowTheme.of(context)
@@ -242,6 +266,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .error,
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -290,12 +315,16 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               16.0, 20.0, 16.0, 20.0),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
-                                        .phoneNumberControllerValidator
+                                        .phoneNumberTextControllerValidator
                                         .asValidator(context),
                                   ),
                                   Text(
@@ -303,10 +332,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                       'lqdcd6oa' /* 市区町村 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                   TextFormField(
-                                    controller: _model.dateOfBirthController1,
+                                    controller:
+                                        _model.dateOfBirthTextController1,
                                     focusNode: _model.dateOfBirthFocusNode1,
                                     autofocus: true,
                                     textCapitalization:
@@ -318,9 +352,17 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                         'qchvaiex' /* 例) 港区 */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .labelLarge,
+                                          .labelLarge
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
                                       errorStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -328,6 +370,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .error,
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -376,12 +419,16 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               16.0, 20.0, 16.0, 20.0),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
-                                        .dateOfBirthController1Validator
+                                        .dateOfBirthTextController1Validator
                                         .asValidator(context),
                                     inputFormatters: [_model.dateOfBirthMask1],
                                   ),
@@ -390,10 +437,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                       'o50610b5' /* 番地 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                   TextFormField(
-                                    controller: _model.dateOfBirthController2,
+                                    controller:
+                                        _model.dateOfBirthTextController2,
                                     focusNode: _model.dateOfBirthFocusNode2,
                                     autofocus: true,
                                     textCapitalization:
@@ -408,10 +460,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
                                       errorStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -419,6 +476,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .error,
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -467,12 +525,16 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               16.0, 20.0, 16.0, 20.0),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
-                                        .dateOfBirthController2Validator
+                                        .dateOfBirthTextController2Validator
                                         .asValidator(context),
                                     inputFormatters: [_model.dateOfBirthMask2],
                                   ),
@@ -481,10 +543,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                       '1541cjjc' /* 建物名・部屋番号 */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                   TextFormField(
-                                    controller: _model.dateOfBirthController3,
+                                    controller:
+                                        _model.dateOfBirthTextController3,
                                     focusNode: _model.dateOfBirthFocusNode3,
                                     autofocus: true,
                                     textCapitalization:
@@ -499,10 +566,15 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
                                       errorStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -510,6 +582,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .error,
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -558,12 +631,16 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               16.0, 20.0, 16.0, 20.0),
                                     ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyLarge,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
-                                        .dateOfBirthController3Validator
+                                        .dateOfBirthTextController3Validator
                                         .asValidator(context),
                                     inputFormatters: [_model.dateOfBirthMask3],
                                   ),
@@ -609,6 +686,7 @@ class _HomeAddressWidgetState extends State<HomeAddressWidget> {
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   fontSize: 18.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                         elevation: 3.0,

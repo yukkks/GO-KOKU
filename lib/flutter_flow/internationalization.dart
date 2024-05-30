@@ -178,14 +178,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ja': 'パスワード',
       'en': '',
     },
-    'rvmzbcp4': {
-      'ja': 'パスワード確認',
-      'en': '',
-    },
-    'dcb52ewq': {
-      'ja': 'パスワード',
-      'en': '',
-    },
     '9riyqjds': {
       'ja': '新規登録',
       'en': '',
@@ -618,11 +610,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'yzerh2kb': {
-      'ja': 'Get Started',
+      'ja': '新規登録',
       'en': '',
     },
     'rngzjxrh': {
-      'ja': 'My Account',
+      'ja': 'ログイン',
       'en': '',
     },
     'ay13kcbd': {

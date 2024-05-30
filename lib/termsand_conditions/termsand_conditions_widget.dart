@@ -68,6 +68,7 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
                 fontFamily: 'Inter',
                 color: Colors.white,
                 fontSize: 22.0,
+                letterSpacing: 0.0,
               ),
         ),
         actions: [],
@@ -107,7 +108,11 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
                           FFLocalizations.of(context).getText(
                             '7fbvc8o9' /* このセクションでは、当社の個人情報利用目的について記載してい... */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodySmall,
+                          style:
+                              FlutterFlowTheme.of(context).bodySmall.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ),
                     ],
@@ -131,6 +136,7 @@ class _TermsandConditionsWidgetState extends State<TermsandConditionsWidget> {
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
                           fontSize: 18.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
                         ),
                     elevation: 3.0,

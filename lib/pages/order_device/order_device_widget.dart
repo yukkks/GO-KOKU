@@ -66,6 +66,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                 fontFamily: 'Inter',
                 color: Colors.white,
                 fontSize: 22.0,
+                letterSpacing: 0.0,
               ),
         ),
         actions: [],
@@ -161,7 +162,11 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .displaySmall,
+                                                      .displaySmall
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -197,6 +202,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                                                     context)
                                                                 .tertiary,
                                                         fontSize: 20.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                       ),
@@ -256,7 +262,12 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                               ],
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodySmall,
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                             textAlign: TextAlign.center,
                                           ),
@@ -305,7 +316,11 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .displaySmall,
+                                              .displaySmall
+                                              .override(
+                                                fontFamily: 'Inter',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -324,7 +339,11 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .bodySmall,
+                                              .bodySmall
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -370,7 +389,11 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .displaySmall,
+                                              .displaySmall
+                                              .override(
+                                                fontFamily: 'Inter',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -389,7 +412,11 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .bodySmall,
+                                              .bodySmall
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -444,6 +471,7 @@ class _OrderDeviceWidgetState extends State<OrderDeviceWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 16.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                         elevation: 2.0,

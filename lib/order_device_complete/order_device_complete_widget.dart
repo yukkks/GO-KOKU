@@ -77,6 +77,7 @@ class _OrderDeviceCompleteWidgetState extends State<OrderDeviceCompleteWidget> {
                     style: FlutterFlowTheme.of(context).displaySmall.override(
                           fontFamily: 'Inter',
                           color: FlutterFlowTheme.of(context).secondaryText,
+                          letterSpacing: 0.0,
                         ),
                   ),
                 ),
@@ -92,6 +93,7 @@ class _OrderDeviceCompleteWidgetState extends State<OrderDeviceCompleteWidget> {
                       fontFamily: 'Inter',
                       color: FlutterFlowTheme.of(context).secondaryText,
                       fontSize: 15.0,
+                      letterSpacing: 0.0,
                     ),
               ),
             ),
@@ -124,6 +126,7 @@ class _OrderDeviceCompleteWidgetState extends State<OrderDeviceCompleteWidget> {
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
                         fontSize: 18.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
                       ),
                   elevation: 2.0,

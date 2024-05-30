@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'auth3_phone_widget.dart' show Auth3PhoneWidget;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -19,11 +20,9 @@ class Auth3PhoneModel extends FlutterFlowModel<Auth3PhoneWidget> {
   final unfocusNode = FocusNode();
   // State field(s) for phoneNumber widget.
   FocusNode? phoneNumberFocusNode;
-  TextEditingController? phoneNumberController;
+  TextEditingController? phoneNumberTextController;
   final phoneNumberMask = MaskTextInputFormatter(mask: '(###) ###-####');
-  String? Function(BuildContext, String?)? phoneNumberControllerValidator;
-
-  /// Initialization and disposal methods.
+  String? Function(BuildContext, String?)? phoneNumberTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -32,10 +31,6 @@ class Auth3PhoneModel extends FlutterFlowModel<Auth3PhoneWidget> {
   void dispose() {
     unfocusNode.dispose();
     phoneNumberFocusNode?.dispose();
-    phoneNumberController?.dispose();
+    phoneNumberTextController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

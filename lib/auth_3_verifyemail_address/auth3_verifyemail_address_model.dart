@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'auth3_verifyemail_address_widget.dart'
     show Auth3VerifyemailAddressWidget;
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -23,8 +24,6 @@ class Auth3VerifyemailAddressModel
   TextEditingController? pinCodeController;
   String? Function(BuildContext, String?)? pinCodeControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     pinCodeController = TextEditingController();
@@ -35,8 +34,4 @@ class Auth3VerifyemailAddressModel
     unfocusNode.dispose();
     pinCodeController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

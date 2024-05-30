@@ -73,6 +73,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                 fontFamily: 'Inter',
                 color: Colors.white,
                 fontSize: 22.0,
+                letterSpacing: 0.0,
               ),
         ),
         actions: [],
@@ -112,7 +113,11 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                           FFLocalizations.of(context).getText(
                             'nmi3rpfu' /* このセクションでは、当社の個人情報利用目的について記載してい... */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodySmall,
+                          style:
+                              FlutterFlowTheme.of(context).bodySmall.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ),
                     ],
@@ -136,6 +141,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
                           fontSize: 18.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
                         ),
                     elevation: 3.0,

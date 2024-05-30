@@ -94,6 +94,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                     fontFamily: 'Inter',
                     color: Colors.white,
                     fontSize: 22.0,
+                    letterSpacing: 0.0,
                   ),
             ),
             actions: [],
@@ -112,7 +113,10 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       BoxShadow(
                         blurRadius: 6.0,
                         color: Color(0x4B1A1F24),
-                        offset: Offset(0.0, 2.0),
+                        offset: Offset(
+                          0.0,
+                          2.0,
+                        ),
                       )
                     ],
                     gradient: LinearGradient(
@@ -183,6 +187,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                       fontFamily: 'Inter',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
+                                      letterSpacing: 0.0,
                                     ),
                               ),
                             ],
@@ -205,7 +210,12 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                             FFLocalizations.of(context).getText(
                               'y5ktrdtz' /* マイアカウント */,
                             ),
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
                           ),
                         ],
                       ),
@@ -244,7 +254,12 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                 FFLocalizations.of(context).getText(
                                   'kzzm7vdm' /* 個人情報変更 */,
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
                               ),
                               FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
@@ -301,8 +316,12 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                   FFLocalizations.of(context).getText(
                                     'gr4xkpyb' /* パスワード変更 */,
                                   ),
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                      ),
                                 ),
                                 FlutterFlowIconButton(
                                   borderColor: Colors.transparent,
@@ -360,8 +379,12 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                   FFLocalizations.of(context).getText(
                                     'ej7sru2g' /* GO-KOKU デバイスの使い方 */,
                                   ),
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                      ),
                                 ),
                                 FlutterFlowIconButton(
                                   borderColor: Colors.transparent,
@@ -408,6 +431,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   fontSize: 18.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                         elevation: 2.0,
@@ -442,6 +466,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
+                                  letterSpacing: 0.0,
                                 ),
                         elevation: 2.0,
                         borderSide: BorderSide(

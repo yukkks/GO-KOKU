@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -27,43 +28,45 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final animationsMap = {
-    'containerOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 1.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 400.ms,
-          begin: Offset(0, 0.524),
-          end: Offset(0, 0),
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 400.ms,
-          begin: Offset(70.0, 0.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-  };
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => Auth3PhoneModel());
 
-    _model.phoneNumberController ??= TextEditingController();
+    _model.phoneNumberTextController ??= TextEditingController();
     _model.phoneNumberFocusNode ??= FocusNode();
+
+    animationsMap.addAll({
+      'containerOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 1.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 400.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 400.0.ms,
+            begin: Offset(0, 0.524),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 400.0.ms,
+            begin: Offset(70.0, 0.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -176,7 +179,11 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                             'pir2o3ir' /* GO-KOKU */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .displaySmall,
+                                              .displaySmall
+                                              .override(
+                                                fontFamily: 'Inter',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -222,7 +229,11 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                           'z51mdwcc' /* 携帯番号 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .displaySmall,
+                                            .displaySmall
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -240,11 +251,20 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .labelLarge,
+                                                        .labelLarge
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          letterSpacing: 0.0,
+                                                        ),
                                               )
                                             ],
                                             style: FlutterFlowTheme.of(context)
-                                                .labelLarge,
+                                                .labelLarge
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -254,8 +274,8 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                         child: Container(
                                           width: double.infinity,
                                           child: TextFormField(
-                                            controller:
-                                                _model.phoneNumberController,
+                                            controller: _model
+                                                .phoneNumberTextController,
                                             focusNode:
                                                 _model.phoneNumberFocusNode,
                                             autofocus: true,
@@ -270,7 +290,12 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                               ),
                                               labelStyle:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: FlutterFlowTheme.of(
@@ -318,7 +343,11 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                                       .secondaryBackground,
                                             ),
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  letterSpacing: 0.0,
+                                                ),
                                             maxLength: 11,
                                             maxLengthEnforcement:
                                                 MaxLengthEnforcement.enforced,
@@ -327,7 +356,7 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             validator: _model
-                                                .phoneNumberControllerValidator
+                                                .phoneNumberTextControllerValidator
                                                 .asValidator(context),
                                             inputFormatters: [
                                               _model.phoneNumberMask
@@ -369,6 +398,7 @@ class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>
                                                             'Readex Pro',
                                                         color: Colors.white,
                                                         fontSize: 18.0,
+                                                        letterSpacing: 0.0,
                                                       ),
                                               elevation: 3.0,
                                               borderSide: BorderSide(
